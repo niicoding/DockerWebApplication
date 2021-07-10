@@ -62,7 +62,8 @@ A simple web application consisting of a login-form, a homepage, and a Google re
     Action: Allow
 # Docker
 The Docker images, project directories, and the docker-compose.yml file are sourced from a macOS tutorial and a GitHub repository written and maintained by Jason McCreary. The Docker components were modified by me to be deployed on an Ubuntu 20.04 LTS operating system hosted on a Google Cloud VM. They were also modified to work alongside a web application consisting of a login form using Google reCaptcha V2 as a verification system.
-
+## Installing Docker
+## Installing Docker Compose
 ## Docker Containers
 ### php / Apache2
 ### MySQL
