@@ -1,0 +1,62 @@
+version: "3.7"
+
+x-defaults:
+  network: &network
+    networks:
+      - net
+
+services:
+  php:
+    image: lamp
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - workspace:/var/www
+    configs:
+      - source: php-ini
+        target: /usr/local/etc/php/conf.d/local.ini
+    <<: *network
+
+  db:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_pwd
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpass
+    volumes:
+      - data:/var/lib/mysql
+    secrets:
+      - db_pwd
+    <<: *network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=dbuser
+      - PMA_PASSWORD=dbpass
+      - UPLOAD_LIMIT=20M
+    ports:
+      - 8080:80
+    <<: *network
+
+
+networks:
+  net:
+
+secrets:
+  db_pwd:
+    file: ./mysql/root_password.txt
+
+configs:
+  php-ini:
+    file: ./php/local.ini
+
+volumes: 
+  workspace:
+     external: true 
+  data:
+     external: true
