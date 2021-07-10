@@ -24,7 +24,42 @@ A simple web application consisting of a login-form, a homepage, and a Google re
 6. Click the three option dots to the right of the instance, and choose "Start / Resume".
       
 ## Firewall Settings
-
+1. default-allow-http:
+    Type: Ingress
+    Targets: http-server
+    Filters: IP ranges: 0.0.0.0/0
+    Protocols / ports: tcp: 80, 8080 (Apache / phpMyAdmin), 1234 (netcat), 3306 (MySQL)
+    Action: Allow
+2. default-allow-https:
+    Type: Ingress
+    Targets: https-server
+    Filters: IP ranges: 0.0.0.0/0
+    Protocols / ports: tcp: 443
+    Action: Allow
+3. default-allow-icmp:
+    Type: Ingress
+    Targets: Apply to all
+    Filters: IP ranges: 0.0.0.0/0
+    Protocols / ports: icmp
+    Action: Allow
+4. default-allow-internal:
+    Type: Ingress
+    Targets: Apply to all
+    Filters: IP ranges: 10.128.0.0/9
+    Protocols / ports: tcp: 0-65535, udp: 0-65535, icmp
+    Action: Allow
+5. default-allow-rdp
+    Type: Ingress
+    Targets: Apply to all
+    Filters: IP ranges: 0.0.0.0/0
+    Protocols / ports: tcp: 3389
+    Action: Allow
+6. default-allow-ssh
+    Type: Ingress
+    Targets: Apply to all
+    Filters: IP ranges: 0.0.0.0/0
+    Protocols / ports: tcp: 22
+    Action: Allow
 # Docker
 ## Docker Containers
 ### php / Apache2
