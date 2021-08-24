@@ -67,11 +67,11 @@ web application consisting of a login form using Google reCaptcha V2 as a verifi
 ## Installing Docker
 1. Install using the repository.\
   $ sudo apt-get update\
-  $ sudo apt-get install \\
-    apt-transport-https \\
-    ca-certificates \\
-    curl \\
-    gnupg \\
+  $ sudo apt-get install "&#92;" \
+    apt-transport-https "&#92;" \
+    ca-certificates "&#92;" \
+    curl "&#92;" \
+    gnupg "&#92;" \
     lsb-release
 2. Add the Docker GPG key.\
   $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
