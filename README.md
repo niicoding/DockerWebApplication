@@ -7,19 +7,19 @@ A simple web application consisting of a login-form, a homepage, and a Google re
 2. Go to: Console -> Compute Engine -> VM Instances -> Create Instance.
 3. Google may ask that you first create a Project for your VM instance. I named mine "DockerProject".
 4. VM instance details:\
-Region: us-west2 (Los Angeles)\
-Zone: us-west2-a\
-Machine configuration:\
-  Series: E2\
-Machine type: e2-small (2vCPUs, 2GB memory)\
-Firewalls:\
-  Allow HTTP traffic: Yes\
-  Allow HTTPS traffic: Yes\
-Boot disk:\
-  Operating system: Ubuntu\
-Version: Ubuntu 20.04 LTS\
-Boot disk type: Balanced persistent disk\
-  Size: 50 GB
+&nbsp&nbspRegion: us-west2 (Los Angeles)\
+&nbsp&nbspZone: us-west2-a\
+&nbsp&nbspMachine configuration:\
+&nbsp&nbsp&nbsp&nbspSeries: E2\
+&nbsp&nbsp&nbsp&nbspMachine type: e2-small (2vCPUs, 2GB memory)\
+&nbsp&nbspFirewalls:\
+&nbsp&nbsp&nbsp&nbspAllow HTTP traffic: Yes\
+&nbsp&nbsp&nbsp&nbspAllow HTTPS traffic: Yes\
+&nbsp&nbspBoot disk:\
+&nbsp&nbsp&nbsp&nbspOperating system: Ubuntu\
+&nbsp&nbsp&nbsp&nbspVersion: Ubuntu 20.04 LTS\
+&nbsp&nbsp&nbsp&nbspBoot disk type: Balanced persistent disk\
+&nbsp&nbsp&nbsp&nbspSize: 50 GB
 5. Click "Create".
 6. Click the three option dots to the right of the instance, and choose "Start / Resume".
       
@@ -117,7 +117,7 @@ Source: https://docs.docker.com/compose/install/
 &nbsp;&nbsp;$ sudo docker container stop {docker_image_id}
 12. Skip ahead and follow the steps under the Volumes header in this README.md file.
 13. Initialize the lamp image, MySQL, and phpMyAdmin in Docker containers using docker-compose and the Docker stack will be named 'dev'.\
-&nbsp;&nbsp;$ sudo docker swarm init
+&nbsp;&nbsp;$ sudo docker swarm init\
 &nbsp;&nbsp;$ sudo docker stack deploy -c docker-compose.yml dev
 14. We can now stop the stack safely using the below command.\
 &nbsp;&nbsp;$ sudo docker stack rm dev.
@@ -159,7 +159,6 @@ Source: http://linuxize.com/post/how-to-create-mysql-user-accounts-and-grant-pri
 &nbsp;&nbsp;&nbsp;&nbsp;`email` varchar(100) NOT NULL,\
 &nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY (`id`)\
 &nbsp;&nbsp;) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;\
-
 &nbsp;&nbsp;INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES (1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com');
 
 # Google reCAPTCHA
