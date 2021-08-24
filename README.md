@@ -85,7 +85,7 @@ web application consisting of a login form using Google reCaptcha V2 as a verifi
 5. Confirm that Docker is installed correctly by checking the version.
   $ docker -v
 
-Source: https://docs.docker.com/engine/install/debian/
+Source: https://docs.docker.com/engine/install/ubuntu/
 ## Installing Docker Compose
 1. Install the latest release of Docker Compose.
   $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
