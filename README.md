@@ -136,7 +136,7 @@ Source: https://docs.docker.com/compose/install/
 2. Open a /bin/bash shell in the MySQL Docker container.\
 &nbsp;&nbsp;$ sudo docker exec -it eefd1976418a /bin/bash
 3. Login to MySQL as root.\
-&nbsp;&nbsp;$ mysql -u root -p
+&nbsp;&nbsp;$ mysql -u root -p\
 &nbsp;&nbsp;$ sup3rs3cr3tp4ssw0rd
 4. Click on the phpMyAdmin logo and find the user IP address in the Database server section.
 5. Create the 'dbuser' user in the MySQL database.\
