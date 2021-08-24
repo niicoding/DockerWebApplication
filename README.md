@@ -10,55 +10,55 @@ A simple web application consisting of a login-form, a homepage, and a Google re
 Region: us-west2 (Los Angeles)\
 Zone: us-west2-a\
 Machine configuration:\
-*Series: E2\
+  Series: E2\
 Machine type: e2-small (2vCPUs, 2GB memory)\
 Firewalls:\
-*Allow HTTP traffic: Yes\
-*Allow HTTPS traffic: Yes\
+  Allow HTTP traffic: Yes\
+  Allow HTTPS traffic: Yes\
 Boot disk:\
-*Operating system: Ubuntu\
+  Operating system: Ubuntu\
 Version: Ubuntu 20.04 LTS\
 Boot disk type: Balanced persistent disk\
-*Size: 50 GB
+  Size: 50 GB
 5. Click "Create".
 6. Click the three option dots to the right of the instance, and choose "Start / Resume".
       
 ## Firewall Settings
-1. default-allow-http:
-    Type: Ingress
-    Targets: http-server
-    Filters: IP ranges: 0.0.0.0/0
-    Protocols / ports: tcp: 80, 8080 (Apache / phpMyAdmin), 1234 (netcat), 3306 (MySQL)
+1. default-allow-http:\
+    Type: Ingress\
+    Targets: http-server\
+    Filters: IP ranges: 0.0.0.0/0\
+    Protocols / ports: tcp: 80, 8080 (Apache / phpMyAdmin), 1234 (netcat), 3306 (MySQL)\
     Action: Allow
-2. default-allow-https:
-    Type: Ingress
-    Targets: https-server
-    Filters: IP ranges: 0.0.0.0/0
-    Protocols / ports: tcp: 443
+2. default-allow-https:\
+    Type: Ingress\
+    Targets: https-server\
+    Filters: IP ranges: 0.0.0.0/0\
+    Protocols / ports: tcp: 443\
     Action: Allow
-3. default-allow-icmp:
-    Type: Ingress
-    Targets: Apply to all
-    Filters: IP ranges: 0.0.0.0/0
-    Protocols / ports: icmp
+3. default-allow-icmp:\
+    Type: Ingress\
+    Targets: Apply to all\
+    Filters: IP ranges: 0.0.0.0/0\
+    Protocols / ports: icmp\
     Action: Allow
-4. default-allow-internal:
-    Type: Ingress
-    Targets: Apply to all
-    Filters: IP ranges: 10.128.0.0/9
-    Protocols / ports: tcp: 0-65535, udp: 0-65535, icmp
+4. default-allow-internal:\
+    Type: Ingress\
+    Targets: Apply to all\
+    Filters: IP ranges: 10.128.0.0/9\
+    Protocols / ports: tcp: 0-65535, udp: 0-65535, icmp\
     Action: Allow
-5. default-allow-rdp
-    Type: Ingress
-    Targets: Apply to all
-    Filters: IP ranges: 0.0.0.0/0
-    Protocols / ports: tcp: 3389
+5. default-allow-rdp\
+    Type: Ingress\
+    Targets: Apply to all\
+    Filters: IP ranges: 0.0.0.0/0\
+    Protocols / ports: tcp: 3389\
     Action: Allow
-6. default-allow-ssh
-    Type: Ingress
-    Targets: Apply to all
-    Filters: IP ranges: 0.0.0.0/0
-    Protocols / ports: tcp: 22
+6. default-allow-ssh\
+    Type: Ingress\
+    Targets: Apply to all\
+    Filters: IP ranges: 0.0.0.0/0\
+    Protocols / ports: tcp: 22\
     Action: Allow
 # Docker
 The Docker images, project directories, and the docker-compose.yml file are sourced from a macOS tutorial and a GitHub repository written and maintained by Jason McCreary. 
@@ -67,22 +67,22 @@ web application consisting of a login form using Google reCaptcha V2 as a verifi
 ## Installing Docker
 1. Install using the repository.
   $ sudo apt-get update
-  $ sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg \
+  $ sudo apt-get install \\
+    apt-transport-https \\
+    ca-certificates \\
+    curl \\
+    gnupg \\
     lsb-release
-2. Add the Docker GPG key.
+2. Add the Docker GPG key.\
   $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-3. Set up the stable repository.
-  $ echo \
+3. Set up the stable repository.\
+  $ echo \\
     "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-4. Update the apt package index and install Docker Engine and containerd.
-  $ sudo apt-get update
+4. Update the apt package index and install Docker Engine and containerd.\
+  $ sudo apt-get update\
   $ sudo apt-get install docker-ce docker-ce-cli containerd.io
-5. Confirm that Docker is installed correctly by checking the version.
+5. Confirm that Docker is installed correctly by checking the version.\
   $ docker -v
 
 Source: https://docs.docker.com/engine/install/ubuntu/
