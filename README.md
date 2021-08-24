@@ -65,8 +65,8 @@ The Docker images, project directories, and the docker-compose.yml file are sour
 The Docker components were modified by me to be deployed on an Ubuntu 20.04 LTS operating system hosted on a Google Cloud VM. They were also modified to work alongside a 
 web application consisting of a login form using Google reCaptcha V2 as a verification system.
 ## Installing Docker
-1. Install using the repository.
-  $ sudo apt-get update
+1. Install using the repository.\
+  $ sudo apt-get update\
   $ sudo apt-get install \\
     apt-transport-https \\
     ca-certificates \\
