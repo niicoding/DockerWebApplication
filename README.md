@@ -66,13 +66,13 @@ The Docker components were modified by me to be deployed on an Ubuntu 20.04 LTS 
 web application consisting of a login form using Google reCaptcha V2 as a verification system.
 ## Installing Docker
 1. Install using the repository.\
-  $ sudo apt-get update\
-  $ sudo apt-get install "&#92;" \
-    apt-transport-https "&#92;" \
-    ca-certificates "&#92;" \
-    curl "&#92;" \
-    gnupg "&#92;" \
-    lsb-release
+&nbsp;$ sudo apt-get update\
+&nbsp;$ sudo apt-get install &#92; \
+&nbsp;&nbsp;&nbsp;apt-transport-https &#92; \
+&nbsp;&nbsp;&nbsp;ca-certificates &#92; \
+&nbsp;&nbsp;&nbsp;curl &#92; \
+&nbsp;&nbsp;&nbsp;gnupg &#92; \
+&nbsp;&nbsp;&nbsp;lsb-release
 2. Add the Docker GPG key.\
   $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 3. Set up the stable repository.\
