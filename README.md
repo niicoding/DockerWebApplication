@@ -66,8 +66,8 @@ The Docker components were modified by me to be deployed on an Ubuntu 20.04 LTS 
 web application consisting of a login form using Google reCaptcha V2 as a verification system.
 ## Installing Docker
 1. Install using the repository.\
-&nbsp;$ sudo apt-get update\
-&nbsp;$ sudo apt-get install &#92; \
+$ sudo apt-get update\
+$ sudo apt-get install &#92; \
 &nbsp;&nbsp;&nbsp;apt-transport-https &#92; \
 &nbsp;&nbsp;&nbsp;ca-certificates &#92; \
 &nbsp;&nbsp;&nbsp;curl &#92; \
@@ -80,10 +80,10 @@ web application consisting of a login form using Google reCaptcha V2 as a verifi
     "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 4. Update the apt package index and install Docker Engine and containerd.\
-  $ sudo apt-get update\
-  $ sudo apt-get install docker-ce docker-ce-cli containerd.io
+&nbsp;&nbsp;&nbsp;$ sudo apt-get update\
+&nbsp;&nbsp;&nbsp;$ sudo apt-get install docker-ce docker-ce-cli containerd.io
 5. Confirm that Docker is installed correctly by checking the version.\
-  $ docker -v
+&nbsp;&nbsp;&nbsp;$ docker -v
 
 Source: https://docs.docker.com/engine/install/ubuntu/
 ## Installing Docker Compose
